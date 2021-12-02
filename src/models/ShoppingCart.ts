@@ -1,5 +1,5 @@
 export default class ShoppingCart {
-    items;
+    items ?;
 
     constructor() {
         this.items = [];
