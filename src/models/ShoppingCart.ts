@@ -11,7 +11,6 @@ export default class ShoppingCart {
     }
 
     total() {
-        console.log()
         return this.items.reduce((x, y) => x + y.priceCents, 0);
     }
 }
