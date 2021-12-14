@@ -13,7 +13,7 @@
 	<h1>Marshmallow shop!</h1>
   
 	<Menu addCartItem={addCartItem}/>
-	<Cart items={cart.groupedItems()} total={cart.total()} />
+	<Cart items={cart.groupedItems()} amount={cart.numberOfItems()} total={cart.total()} />
   </main>
   
   <style>

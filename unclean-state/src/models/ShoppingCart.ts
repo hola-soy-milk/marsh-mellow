@@ -14,14 +14,19 @@ export default class ShoppingCart {
 
     groupedItems() {
         return this.items.reduce((cartItem, item) => {
-            cartItem[item.name] = cartItem[item.name] || {
+            cartItem[item.name()] = cartItem[item.name()] || {
+                name: item.name(),
                 quantity: 0,
                 priceCents: item.priceCents()
             };
-            cartItem[item.name].quantity += 1;
-            cartItem[item.name].priceCents += item.priceCents();
+            cartItem[item.name()].quantity += 1;
+            cartItem[item.name()].priceCents += item.priceCents();
             return cartItem;
         }, {});
+    }
+
+    numberOfItems() {
+        return this.items.length;
     }
 
     total() {
