@@ -5,7 +5,7 @@ export abstract class Marshmallow {
 
 class Fluffy extends Marshmallow {
     priceCents() {
-        return 999;
+        return 99;
     }
     name() {
         return "Fluffy";
