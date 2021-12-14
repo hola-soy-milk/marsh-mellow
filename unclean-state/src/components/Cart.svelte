@@ -3,7 +3,7 @@
   export let total;
 </script>
 
-{#if items.length > 0}
+{#if items && items.length > 0}
   <table>
     <tr>
       <th>Name</th>
@@ -11,8 +11,8 @@
     </tr>
   {#each items as item }
     <tr>
-      <td>{item.name}</td>
-      <td class="price">${item.priceCents / 100.0}</td>
+      <td>{item.name()}</td>
+      <td class="price">${item.priceCents() / 100.0}</td>
     </tr>
   {/each}
     <tr>

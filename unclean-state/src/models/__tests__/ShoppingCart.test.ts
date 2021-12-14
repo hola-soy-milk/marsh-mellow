@@ -8,14 +8,16 @@ test("New cart has no items and 0 total", () => {
 
 test("Adding item to cart successfully", () => {
   const cart = new ShoppingCart();
-  cart.addItem({data: "value"});
-  expect(cart.items).toEqual([{
+  const updatedCart = cart.addItem({data: "value"});
+  expect(updatedCart.items).toEqual([{
     data: "value"
   }]);
 });
 
 test("Cart with item adds to total", () => {
   const cart = new ShoppingCart();
-  cart.addItem({priceCents: 100});
+  cart.addItem({
+    priceCents: () => 100
+  });
   expect(cart.total()).toBe(100);
 });

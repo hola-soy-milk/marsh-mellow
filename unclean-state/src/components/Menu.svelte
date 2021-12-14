@@ -1,24 +1,11 @@
 <script lang="ts">
-  let marshmallows = [
-      {
-          name: "Fluffy", 
-          priceCents: 299
-      },
-      {
-          name: "Not as fluffy", 
-          priceCents: 199
-      },
-      {
-          name: "Extra Fluffy", 
-          priceCents: 499
-      }
-  ]
+  import {availableMarshmallows} from '../models/Marshmallow';
   export let addCartItem;
 </script>
 
-{#each marshmallows as marshmallow}
-    <button on:click={addCartItem(marshmallow)}>
-        {marshmallow.name}<br>${marshmallow.priceCents / 100.0}
+{#each availableMarshmallows as marshmallow}
+    <button on:click={(e) => addCartItem(marshmallow)}>
+        {marshmallow.name()}<br>${marshmallow.priceCents() / 100.0}
     </button>
 {/each}
 
