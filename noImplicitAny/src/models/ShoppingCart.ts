@@ -30,10 +30,6 @@ export default class ShoppingCart {
     }
 
     total() {
-        if (this.items) {
-            return this.items.reduce((x, y) => x + y.priceCents(), 0);
-        } else {
-            return 0;
-        }
+        return this.items.reduce((x, y) => x + y.priceCents(), 0);
     }
 }
