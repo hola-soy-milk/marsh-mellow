@@ -11,11 +11,11 @@
       <th>Amount</th>
       <th>Price</th>
     </tr>
-  {#each Object.entries(items) as [name, row] }
+  {#each Object.values(items) as row }
     <tr>
-      <td>{name}</td>
-      <td>{row.quantity}</td>
-      <td class="price">${row.priceCents / 100.0}</td>
+      <td>{row['name']}</td>
+      <td>{row['quantity']}</td>
+      <td class="price">${row['priceCents'] / 100.0}</td>
     </tr>
   {/each}
     <tr>
