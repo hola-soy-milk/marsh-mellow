@@ -4,14 +4,14 @@
   export let total: any;
 </script>
 
-{#if Object.entries(items).length}
+{#if items.length}
   <table>
     <tr>
       <th>Name</th>
       <th>Amount</th>
       <th>Price</th>
     </tr>
-  {#each Object.values(items) as row }
+  {#each items as row }
     <tr>
       <td>{row.name}</td>
       <td>{row.quantity}</td>
