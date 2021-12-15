@@ -1,6 +1,6 @@
 export abstract class Marshmallow {
-    abstract priceCents(): number;
-    abstract name(): string;
+    abstract priceCents(): any;
+    abstract name(): any;
 }
 
 class Fluffy extends Marshmallow {

@@ -1,11 +1,17 @@
 {
     "root": true,
+    "plugins": ["svelte3", "@typescript-eslint"],
     "parser": "@typescript-eslint/parser",
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+    "overrides": [
+      {
+        "files": ["*.svelte"],
+        "processor": "svelte3/svelte3"
+      }
     ],
+    "settings": {
+      "svelte3/typescript": true, // load TypeScript as peer dependency
+      // ...
+    },
     "rules": { 
       "@typescript-eslint/no-explicit-any": "off"
     },
@@ -19,12 +25,5 @@
       "es6": true,
       "browser": true
     },
-    "overrides": [
-      {
-        "files": ["*.svelte"],
-        "processor": "svelte3/svelte3"
-      }
-    ],
-    "plugins": ["svelte3", "@typescript-eslint"],
     "ignorePatterns": ["node_modules"]
   }
