@@ -1,15 +1,26 @@
 <script lang="ts">
-  import {availableMarshmallows, Marshmallow} from '../models/Marshmallow';
+  import { availableMarshmallows, Marshmallow } from "../models/Marshmallow";
   export let addCartItem: (item: Marshmallow) => void;
 </script>
 
-{#each availableMarshmallows as marshmallow}
+<div class="flex">
+  {#each availableMarshmallows as marshmallow}
     <button on:click={(e) => addCartItem(marshmallow)}>
-        {marshmallow.name()}<br>${marshmallow.priceCents() / 100.0}
+      {marshmallow.name()}<br />${marshmallow.priceCents() / 100.0}
     </button>
-{/each}
+  {/each}
+</div>
 
 <style>
+  .flex {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    justify-content: space-around;
+    justify-items: center;
+  }
+
   button {
     font-family: inherit;
     font-size: inherit;
