@@ -16,9 +16,10 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
-    justify-content: space-around;
+    max-width: 75%;
+    justify-content: space-between;
     justify-items: center;
+    gap: 6px;
   }
 
   button {
