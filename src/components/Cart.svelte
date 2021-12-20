@@ -1,7 +1,9 @@
 <script lang="ts">
-  export let items: any[];
-  export let amount: any;
-  export let total: any;
+  import type { GroupedCartItem } from "../models/ShoppingCart";
+
+  export let items: GroupedCartItem[];
+  export let amount: number;
+  export let total: number;
 </script>
 
 {#if items.length}
@@ -34,8 +36,8 @@
         width: 50%;
     }
     th {
-        background-color: black;
-        color: white;
+        background-color: var(--primary-color);
+        color: var(--background-color);
     }
     td {
         text-align: left;
@@ -44,7 +46,7 @@
         text-align: right;
     }
     table, th, td {
-        border: 1px solid black;
+        border: 1px solid var(--primary-color);
         border-collapse: collapse;
         padding: 1em;
     }
