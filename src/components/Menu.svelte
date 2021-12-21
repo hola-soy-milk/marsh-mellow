@@ -5,7 +5,7 @@
 
 <div class="flex">
   {#each availableMarshmallows as marshmallow}
-    <button on:click={(e) => addCartItem(marshmallow)}>
+    <button on:click={(_) => addCartItem(marshmallow)}>
       {marshmallow.name()}<br />${marshmallow.priceCents() / 100.0}
     </button>
   {/each}
