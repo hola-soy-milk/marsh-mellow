@@ -7,7 +7,7 @@ class Fluffy extends Marshmallow {
         return 99;
     }
     name() {
-        return "Fluffy";
+        return "Caramelo";
     }
 }
 
@@ -16,7 +16,7 @@ class NotSoFluffy extends Marshmallow {
         return 199;
     }
     name() {
-        return "Not So Fluffy";
+        return "Chocolate";
     }
 }
 
@@ -25,7 +25,7 @@ class ExtraFluffy extends Marshmallow {
         return 499;
     }
     name() {
-        return "Extra Fluffy";
+        return "Mazapán";
     }
 }
 

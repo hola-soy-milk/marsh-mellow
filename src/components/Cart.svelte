@@ -9,9 +9,9 @@
 {#if items.length}
   <table>
     <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Price</th>
+      <th>Nombre</th>
+      <th>Cantidad</th>
+      <th>Precio</th>
     </tr>
     {#each items as row}
       <tr>
